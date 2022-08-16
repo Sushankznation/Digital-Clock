@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BackgroundColor</title>
+   <style>
+      *{
+         padding: 0px;
+         margin: 0%;
+         font-weight:500;
+      }
+      body{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: black;
+         color: white;
+      }
+      #container{
+            border: 10px solid rgb(0, 0, 0);
+            width: 100%;
+            height: 500px;
+           font-style:inherit;
+            display: flex;
+            align-items:center;
+            justify-content:space-evenly;
+      }
+      #small-container{
+         border: 5px solid rgb(11, 223, 205);
+         border-radius: 50px 10px;
+         font-size: 90px;
+         width: 500px;
+         display: flex;
+         padding: 10px;
+         justify-content: center;
+      }
+   </style>
+</head>
+<body>
+   <div id="container" onload="timeDigital()">
+      <div id="small-container">
+         <!-- Hello  -->
+      </div>
+   </div>
+   <script>
+      function timeDigital(){
+        
+         //var date = new Date(parseInt(time));
+         let date = new Date().toLocaleTimeString();
+         let displayTime = document.getElementById('small-container')
+         displayTime.innerHTML = date;
+      }
+      setInterval(timeDigital,1000);
+     // timeDigital()
+   </script>
+</body>
+</html>
